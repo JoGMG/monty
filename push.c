@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * f_push - add node to stack
+ * f_push - pushes an element to the stack.
  * @head: head of stack
  * @counter: line_number
  * Return: no return
@@ -25,7 +25,7 @@ void f_push(stack_t **head, unsigned int counter)
 			free_stack(*head);
 			exit(EXIT_FAILURE); }}
 	else
-	{ fprint(stderr, "L%d: usage:push integer\n", counter);
+	{ fprintf(stderr, "L%d: usage: push integer\n", counter);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);

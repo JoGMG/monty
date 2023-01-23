@@ -58,5 +58,27 @@ typedef struct instruction_s
 } instruction_t;
 
 void f_push(stack_t **head, unsigned int counter);
+void f_pall(stack_t **head, unsigned int counter);
+void f_pint(stack_t **head, unsigned int counter);
+void f_pop(stack_t **head, unsigned int counter); 
+void f_swap(stack_t **head, unsigned int counter);
+void f_add(stack_t **head, unsigned int counter);
+void f_nop(stack_t **head, unsigned int counter);
+void f_sub(stack_t **head, unsigned int counter);
+void f_div(stack_t **head, unsigned int counter);
+void f_mul(stack_t **head, unsigned int counter);
+void f_mod(stack_t **head, unsigned int counter);
+void f_pchar(stack_t **head, unsigned int counter);
+void f_pstr(stack_t **head, unsigned int counter);
+void f_rot1(stack_t **head, unsigned int counter);
+void f_rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
+void f_queue(stack_t **head, unsigned int counter);
+void f_stack(stack_t **head, unsigned int counter);
+void addnode(stack_t **head, int n);
+void addqueue(stack_t **head, int n);
+char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
+char *clean_line(char *content);
+ssize_t getstdin(char **lineptr, int file);
+int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
 
 #endif /* MONTY_H */
