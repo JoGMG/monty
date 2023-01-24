@@ -1,8 +1,6 @@
 #include "monty.h"
-
 /**
- * f_stack - sets the format of the data to a stack (LIFO).
- * This is the default behavior of the program.
+ * f_stack - prints the top
  * @head: stack head
  * @counter: line_number
  * Return: no return

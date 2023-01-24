@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * f_queue - sets the format of the data to a queue (FIFO).
+ * f_queue - prints the top
  * @head: stack head
  * @counter: line_number
  * Return: no return

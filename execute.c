@@ -1,13 +1,12 @@
 #include "monty.h"
-
 /**
- * execute - executes the opcode
- * @stack: head linked list - stack
- * @counter: line_counter
- * @file: pointer to monty file
- * @content: line content
- * Return: no return
-**/
+* execute - executes the opcode
+* @stack: head linked list - stack
+* @counter: line_counter
+* @file: poiner to monty file
+* @content: line content
+* Return: no return
+*/
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
 	instruction_t opst[] = {
@@ -22,19 +21,19 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 				{"mod", f_mod},
 				{"pchar", f_pchar},
 				{"pstr", f_pstr},
-				{"rot1", f_rot1},
+				{"rotl", f_rotl},
 				{"rotr", f_rotr},
 				{"queue", f_queue},
 				{"stack", f_stack},
 				{NULL, NULL}
 				};
 	unsigned int i = 0;
-	char *ops;
+	char *op;
 
 	op = strtok(content, " \n\t");
 	if (op && op[0] == '#')
 		return (0);
-	bus.arg =  strtok(NULL, " \n\t");
+	bus.arg = strtok(NULL, " \n\t");
 	while (opst[i].opcode && op)
 	{
 		if (strcmp(op, opst[i].opcode) == 0)
